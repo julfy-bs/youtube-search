@@ -1,5 +1,6 @@
 import { YouTubeAPI } from '@/shared/api/videoApi.ts';
 import type { CustomError, YTError } from '@/shared/lib/types/Errors.types.ts';
+import type { SortingValues } from '@/shared/lib/types/SortingValues.ts';
 import type { Video } from '@/shared/lib/types/Video.types.ts';
 import { defineStore } from 'pinia';
 
@@ -32,7 +33,7 @@ export const useVideosStore = defineStore('videos', {
 			(video1, video2) => video1[state.selectedSort]?.localeCompare(video2[state.selectedSort])),
 	},
 	actions: {
-		selectOption(option: 'title' | 'channelTitle' | 'publishedAt') {
+		selectOption(option: SortingValues) {
 			this.selectedSort = option;
 		},
 		selectCurrentVideo(video: Video) {

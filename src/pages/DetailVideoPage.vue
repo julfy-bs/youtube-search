@@ -17,21 +17,9 @@
 	setup
 >
 import { useVideosStore } from '@/app/store';
-import type { Video } from '@/shared/lib/types/Video.types.ts';
 import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 
-const video = ref<Video | {}>({
-	'kind': 'youtube#video',
-	'etag': 'NYI-r3BOH689BXupxBcjlwEA_cg',
-	'id': 'XHL_SCv60lI',
-	'statistics': {
-		'viewCount': '364404',
-		'likeCount': '10082',
-		'favoriteCount': '0',
-		'commentCount': '237',
-	},
-});
 const route = useRoute();
 const videoEmbedded = ref(`https://www.youtube.com/embed/${ route.params.videoId }`);
 const store = useVideosStore();

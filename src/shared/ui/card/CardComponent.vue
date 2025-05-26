@@ -60,7 +60,7 @@ const props = defineProps<{
 }>();
 
 const store = useVideosStore();
-const formattedViews = computed(() => formatNumber(props.video.views));
+const formattedViews = computed(() => formatNumber(props.video.views!));
 const isSaved = computed(() => store.favouriteVideos.some((favourite) => favourite.id === props.video.id));
 
 const handleSaveVideoBtn = (video: Video) => {
