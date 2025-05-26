@@ -1,0 +1,116 @@
+.card {
+  align-items: center;
+  background-color: #0a0a0c;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card_content {
+  box-sizing: border-box;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "title title title"
+"channel date views";
+  padding: 8px 16px 32px;
+  width: 100%;
+}
+
+.card_title {
+  display: -webkit-box;
+  grid-area: title;
+  max-width: 100%;
+  max-height: 3em;
+}
+
+.card_date {
+  grid-area: date;
+  margin: 0;
+}
+
+
+.card_title, .card_channel {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  margin: 0;
+  overflow: hidden;
+}
+
+.card_channel, .card_views {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 100%;
+}
+
+
+.card_views,
+.card_channel {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  max-height: 2em;
+}
+
+.card_channel {
+  font-size: 16px;
+  grid-area: channel;
+}
+
+.card_views {
+  grid-area: views;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
+}
+
+.card_image {
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  display: block;
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+.card_image:before {
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+}
+
+.card_link {
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 32px;
+}
+
+.card_save_button {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background-color: #484848;
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  z-index: 10;
+  border: none;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.card_save_button:hover {
+  background-color: #101015;
+}
+
+.card_save_icon {
+
+}

@@ -1,0 +1,32 @@
+.error_server {
+  display: flex;
+  flex-direction: column;
+}
+
+.error_article {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin: auto 0;
+}
+
+.error_code {
+  font-size: 66px;
+  font-weight: 700;
+  line-height: 137%;
+}
+
+.error_status {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 133%;
+}
+
+.error_message {
+  margin: 0;
+  padding: 0 40px;
+  box-sizing: border-box;
+  max-width: 660px;
+}
