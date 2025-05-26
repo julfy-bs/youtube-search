@@ -1,0 +1,1 @@
+export type SortingValues = 'title' | 'channelTitle' | 'publishedAt';
