@@ -17,7 +17,6 @@ onMounted(() => {
 	const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
 		if (entries[0].isIntersecting && store.videos.length >= 10) {
 			store.loadMoreVideos();
-			console.log('ZAPROS');
 		}
 	}, {
 		rootMargin: '0px',
