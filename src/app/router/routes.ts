@@ -2,7 +2,7 @@ import DetailVideoPage from '@/pages/DetailVideoPage.vue';
 import FavouriteVideosPage from '@/pages/FavouriteVideosPage.vue';
 import SearchVideoPage from '@/pages/SearchVideoPage.vue';
 
-const BASE_URL = import.meta.env.NODE_ENV === 'production'
+const BASE_URL = import.meta.env.MODE === 'production'
 	? '/youtube-search/'
 	: '/';
 
