@@ -1,10 +1,7 @@
 import DetailVideoPage from '@/pages/DetailVideoPage.vue';
 import FavouriteVideosPage from '@/pages/FavouriteVideosPage.vue';
 import SearchVideoPage from '@/pages/SearchVideoPage.vue';
-
-const BASE_URL = import.meta.env.MODE === 'production'
-	? '/youtube-search/'
-	: '/';
+import { BASE_URL } from '@/shared/lib/config/router.ts';
 
 export const routes = [
 	{ path: `${ BASE_URL }`, component: SearchVideoPage },

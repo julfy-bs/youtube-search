@@ -12,7 +12,7 @@
 				@update:modelValue='() => store.getVideosWithQueryString()'
 			/>
 		</form>
-		<RouterLink to='/'>
+		<RouterLink :to='ROUTER_PATHS.HOME'>
 			<IconComponent
 				:size='48'
 				class='title_icon'
@@ -40,7 +40,7 @@
 >
 
 import { useVideosStore } from '@/app/store';
-import { routerConfig } from '@/shared/lib/config/router.ts';
+import { ROUTER_PATHS, routerConfig } from '@/shared/lib/config/router.ts';
 import IconComponent from '@/shared/ui/icons/IconComponent.vue';
 import InputComponent from '@/shared/ui/input/InputComponent.vue';
 import styles from './NavigationComponent.module.css';
